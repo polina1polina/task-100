@@ -3,17 +3,16 @@ public class Main {
 
         int originalBill = 100;
         int refill = 1100;
-        boolean bill = refill > 100;
-        int bonus = refill / 100;
-        int finalBill;
+        int bonus;
 
-        if (bill) {
-            finalBill = originalBill + refill + bonus;
+        if (refill >= 1000) {
+            bonus = refill / 100;
         } else {
-            finalBill = originalBill + refill;
+            bonus = 0;
         }
+
         System.out.println("Баланс счёта: ");
-        System.out.println((finalBill) + " руб");
+        System.out.println((originalBill + refill + bonus) + " руб");
         System.out.println("Бонусов начислено: " +(bonus));
 
     }
